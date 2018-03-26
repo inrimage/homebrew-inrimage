@@ -13,8 +13,8 @@ class Inrimage < Formula
   depends_on "netpbm" => :recommended
   depends_on "jasper" => :recommended
   depends_on "hdf5" => :recommended
-  depends_on "gtk+"
-
+  depends_on "gtk+" => :recommended
+  
   def install
     ENV.deparallelize
 
