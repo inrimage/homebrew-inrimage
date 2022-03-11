@@ -5,14 +5,14 @@ class Inrimage < Formula
   url "http://inrimage.gforge.inria.fr/dist/4.6.8/inrimage-4.6.8.tar.gz"
   sha256 "b7182c7feed6b93acc35c0f6cac921dd1aeb02c180d7c2d178e6428158415412"
 
-  depends_on :x11
+#  depends_on :x11
   depends_on "gcc"
   depends_on "jpeg" => :recommended
   depends_on "libtiff" => :recommended
   depends_on "libpng" => :recommended
   depends_on "netpbm" => :recommended
   depends_on "jasper" => :recommended
-  depends_on "hdf5" => :recommended
+  depends_on "hdf5" => :optional
   depends_on "gtk+" => :recommended
   
   def install
@@ -42,3 +42,4 @@ class Inrimage < Formula
     system "./test | #{bin}/tpr".to_s
   end
 end
+
